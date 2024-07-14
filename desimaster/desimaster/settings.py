@@ -87,13 +87,14 @@ WSGI_APPLICATION = "desimaster.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'desibcz',
-        'USER': 'admin',
-        'PASSWORD': 'Vendi313313990',
-        'HOST': 'database.c9ooguoimvj6.eu-north-1.rds.amazonaws.com',  # e.g., 'your-db-instance.cleardb.com'
+        'NAME': 'desibcz',                # Your actual database name
+        'USER': 'admin',    # Use the master username from RDS
+        'PASSWORD': 'Vendi313313990',        # Your database password
+        'HOST': 'database.c9ooguoimvj6.eu-north-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
+
 
 
 
