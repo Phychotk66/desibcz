@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-v4*tpzz3*srnosyhlnbyc-muo)lba3ba7&krpyqj%1#+r5vx8z
 DEBUG = False
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['16.171.155.245' , 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['16.171.254.118' , 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -145,12 +145,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 # Security settings
-SECURE_SSL_REDIRECT = True
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-X_FRAME_OPTIONS = 'DENY'
-SECURE_HSTS_SECONDS = 3600
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
+
 
 
