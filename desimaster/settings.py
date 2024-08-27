@@ -36,7 +36,8 @@ DEBUG = False
 
 #ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['mygoad.com', 'www.mygoad.com', 'desibcz.onrender.com']
+
 
 
 
@@ -165,3 +166,4 @@ MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaw
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 AWS_QUERYSTRING_AUTH = False
+
