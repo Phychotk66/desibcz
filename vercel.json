@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "desimaster/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "desimaster/wsgi.py"
+      }
+    ]
+  }
