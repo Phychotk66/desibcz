@@ -36,7 +36,7 @@ DEBUG = False
 
 #ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['mygoad.com', 'www.mygoad.com', '.vercel.app']
+ALLOWED_HOSTS = ['mygoad.com', 'www.mygoad.com', 'desibcz.render.com']
 
 
 
