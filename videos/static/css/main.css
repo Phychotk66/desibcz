@@ -274,11 +274,10 @@ text-align: center;
 
 .video-details-box ul li {
     display: inline;
-    margin-right: 10px;
     color: #f7f7f7;
     background-color: #000000;
-    padding: 8px;
-    border-radius:5px ;
+    padding: 0px;
+    
 }
 
 .related{
