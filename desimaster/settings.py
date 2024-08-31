@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'videos.apps.VideosConfig',
     'django_cleanup',
     'storages',
-    'bootstrap5'
+    'bootstrap5',
+    'django.contrib.sitemaps'
 ]
 
 MIDDLEWARE = [
