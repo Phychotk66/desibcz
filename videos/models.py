@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -31,9 +32,10 @@ class Video(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     related_videos = models.ManyToManyField('self', blank=True)
 
-
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('videos:video_player', args=[str(self.id)])
     
 
