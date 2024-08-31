@@ -4,6 +4,8 @@ from django.shortcuts import get_object_or_404
 from .models import Video, Category, SubCategory, Tag
 from .utils import transcode_video
 import os
+from django.http import HttpResponse
+
 
 def upload_video(request):
     if request.method == 'POST':
@@ -136,3 +138,10 @@ def video_player(request, video_id):
     }
 
     return render(request, 'videos/video_player.html', context)
+
+def robots_txt(request):
+    lines = [
+        "User-agent: *",
+        "Disallow:",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
