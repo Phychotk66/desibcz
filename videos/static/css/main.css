@@ -266,19 +266,28 @@ text-align: center;
     font-family: cursive;
 }
 
-.video-details-box ul {
+.tag-list ul {
     list-style: none;
     padding: 0;
-    color: #181010;
+    display: flex;
+    flex-wrap: wrap; /* Allows the tags to wrap to the next line if they don't fit */
+   justify-content:center;
 }
 
-.video-details-box ul li {
-    display: inline;
-    color: #f7f7f7;
-    background-color: #000000;
-    padding: 0px;
-    
+.tag-list ul li {
+    display: inline-block;
+    margin: 4px;
+    padding: 5px 10px;
+    background-color: #000; /* Background color of the tags */
+    color: #fff; /* Text color */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    font-size: 14px; /* Font size of the tags */
 }
+
+.tag-list ul li:hover {
+    background-color: #333; /* Optional: change background color on hover */
+}
+
 
 .related{
     font-family: cursive;
