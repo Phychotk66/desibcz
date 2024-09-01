@@ -1,0 +1,12 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ video.title }}",
+  "description": "{{ video.description }}",
+  "thumbnailUrl": "{{ video.thumbnail.url }}",
+  "uploadDate": "{{ video.created_at|date:'c' }}",
+  "duration": "{{ video.duration|default:'PT0M0S' }}",
+  "contentUrl": "{{ video.video_file.url }}"
+}
+</script>
