@@ -59,15 +59,14 @@
        
             <h1>{{ video.title }}</h1>
             <p>{{ video.description }}</p>
-    
-              <div>
+           <div class="tag-list">
                 <ul>
                     {% for tag in video.tags.all %}
                         <li>{{ tag.name }}</li>
                     {% endfor %}
                 </ul>
-            
-        </div>
+            </div>
+         
     </div>
 
 
@@ -76,30 +75,29 @@
 
 
 <div class="container my-4">
-  <h2 class="related">Related Videos</h2>
-  <div class="row">
-      {% for related_video in related_videos %}
-      <div class="col-md-4">
-        <div class="video-thumbnail">
-            {% if video.thumbnail %}
-                <a href="{% url 'videos:video_player' video.id %}">
-                    <img src="{{ video.thumbnail.url }}" alt="{{ video.title }}">
-                </a>
-                <p class="video-title">{{ video.title }}</p>
-                {% if video.duration %}
-                <p class="video-duration"><img src="{% static 'images/clock-icon.png' %}" alt="Clock Icon"> {{ video.duration }}</p>
-
-                {% else %}
-                    <p class="video-duration">Duration not available</p>
-                {% endif %}
-            {% else %}
-                <p class="video-title">No thumbnail available</p>
-            {% endif %}
-        </div>
+    <h2 class="related">Related Videos</h2>
+    <div class="row">
+        {% for related_video in related_videos %}
+        <div class="col-md-4">
+          <div class="video-thumbnail">
+              {% if related_video.thumbnail %}
+                  <a href="{% url 'videos:video_player' related_video.id %}">
+                      <img src="{{ related_video.thumbnail.url }}" alt="{{ related_video.title }}">
+                  </a>
+                  <p class="video-title">{{ related_video.title }}</p>
+                  {% if related_video.duration %}
+                  <p class="video-duration"><img src="{% static 'images/clock-icon.png' %}" alt="Clock Icon"> {{ related_video.duration }}</p>
+                  {% else %}
+                      <p class="video-duration">Duration not available</p>
+                  {% endif %}
+              {% else %}
+                  <p class="video-title">No thumbnail available</p>
+              {% endif %}
+          </div>
+      </div>
+        {% endfor %}
     </div>
-      {% endfor %}
   </div>
-</div>
 
 {% if related_videos.has_other_pages %}
 <nav aria-label="Page navigation">
